@@ -1,0 +1,39 @@
+GET http://localhost:4004/odata/v4/production/ProductionOrders
+###create a new production order
+POST http://localhost:4004/odata/v4/production/ProductionOrders
+Content-Type: application/json
+
+{
+  "ID": 1,
+  "Material": "MAT100",
+  "Plant": "1000",
+  "PlannedQty": 100,
+  "ActualQty": 0,
+  "Status": "Planned"
+}
+###ID
+POST http://localhost:4004/odata/v4/production/ProductionOrders
+Content-Type: application/json
+
+{
+  "ID": 2,
+  "Material": "MAT200",
+  "Plant": "2000",
+  "PlannedQty": 100,
+  "ActualQty": 0,
+  "Status": "Planned"
+}
+###update the production order
+PUT http://localhost:4004/odata/v4/production/ProductionOrders(1)
+Content-Type: application/json
+
+{
+  "ID": 1,
+  "Material": "MAT90",
+  "Plant": "1000",
+  "PlannedQty": 100,
+  "ActualQty": 80,
+  "Status": "In Progress"
+}
+###delete the production order
+DELETE http://localhost:4004/odata/v4/production/ProductionOrders(1)
