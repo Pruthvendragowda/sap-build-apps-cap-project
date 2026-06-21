@@ -23,6 +23,23 @@ Production List
 Create Order Form
 [Create Form](PV_create_form.png)
 
+
+SAP BTP Destination Configuration
+
+Configured a destination in SAP BTP to connect the CAP backend service.
+
+Destination name: CAPBackend  
+Type: HTTP  
+Proxy: Internet  
+Authentication: NoAuthentication  
+
+Connection Test:
+
+The destination was tested using the BTP cockpit "Check Connection" feature.
+
+Result: Successfully connected to CAP backend
+![Destination Test](destination_check_success.png)
+
 API Sample
 
 ```json
@@ -35,3 +52,5 @@ API Sample
     }
   ]
 }
+
+
